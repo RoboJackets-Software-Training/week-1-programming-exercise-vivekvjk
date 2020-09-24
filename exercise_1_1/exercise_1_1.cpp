@@ -40,12 +40,16 @@ int main() {
         else if (direction == 'd'){
             wheel_speeds[1] = 0.5;
             wheel_speeds[3] = 0.5;
-            wheel_speeds[0] = 0.5;
-            wheel_speeds[2] = 0.5;
+            wheel_speeds[0] = 1;
+            wheel_speeds[2] = 1;
         }
         else if (direction == 'e'){
-            std::cout <<"Shutting Down" << std::endl;
+            std::cout <<"Shutting down" << std::endl;
             keep_going = false;
+            wheel_speeds[0] = 0;
+            wheel_speeds[2] = 0;
+            wheel_speeds[1] = 0;
+            wheel_speeds[3] = 0;
         }
         else {
             std::cout << "Sorry, I didn't get that. Try again." << std::endl;
