@@ -3,7 +3,7 @@
 #include <vector>
 
 int main() {
-	std::cout << "Use the wasd keys and enter to input a direction, or the E key to stop" << std::endl;
+	// std::cout << "Use the wasd keys and enter to input a direction, or the E key to stop" << std::endl;
 
     // Write your code for step 1 here
     std::vector<float> wheel_speeds(4);
@@ -52,7 +52,7 @@ int main() {
         }
 
         for (int i = 0; i < wheel_speeds.size(); i++){
-            std::cout << "Wheel at index " << i <<" has speed: " << wheel_speeds[i] << std::endl;
+            std::cout << "wheel at index " << i <<" has speed: " << wheel_speeds[i] << std::endl;
         }
         //
     }
