@@ -11,6 +11,18 @@ int main()
 
     // Palindrome Check
     // WRITE YOUR PALINDROME CHECK HERE
-
+    bool isPal = true;
+    for (int i = 0; i < str.length()/2; i++){
+    	if (str[i] != str[str.length() - 1- i]){
+    		isPal = false;
+    		break;
+    	}
+    }
+    if (isPal){
+    	std::cout << str << " is a palindrome" << std::endl;
+    }
+    else{
+    	std::cout << str << " is NOT a palindrome" << std::endl;
+    }
     return 0;
 }
