@@ -37,9 +37,52 @@ int main() {
 
   // TODO write your code here
   // =========== START =========
+  std::cout << "x: {" << x[0];
+  for(int i = 1; i < x.size(); i++) {
+    std::cout << ", " << x[i];
+  }
+  std::cout << "}" << std::endl;
+
+  std::cout << "w: {" << w[0];
+  for(int i = 1; i < w.size(); i++) {
+    std::cout << ", " << w[i];
+  }
+  std::cout << "}" << std::endl;
+
+  int pack_size = w.size()/2;
+  for(int i = 0; i < x.size(); i++){
+
+    int index = i - pack_size;
+    int sum = 0;
+
+    for(int j = 0; j < w.size(); j++){
+
+      if (index >= 0 && index  < x.size()){
+        sum += x[index]*w[j];
+      }
+
+      else if (!pack_with_zeros && index < 0){
+        sum += x[0]*w[j];
+      }
+
+      else if (!pack_with_zeros && index >= x.size()){
+        sum += x[x.size()-1]*w[j];
+      }
+
+      index++;
+
+    }
+    y.push_back(sum);
 
 
+    
+  }
 
+  std::cout << "y: {" << y[0];
+  for(int i = 1; i < y.size(); i++) {
+    std::cout << ", " << y[i];
+  }
+  std::cout << "}" << std::endl;
 
   // =========== END ===========
 
